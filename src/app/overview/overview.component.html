@@ -1,0 +1,77 @@
+<h1>Binding to Hero Object</h1>
+<div>
+    <h1>Hero {{hero.id}}: {{hero.name}}</h1>
+    Intelligence:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="hero.intelligence" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Strength:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="hero.strength" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Combat:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="hero.combat" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+
+</div>
+<h1>Binding to Hero Model</h1>
+<div>
+    <h1>Hero {{heroModel.id}}: {{heroModel.name}}</h1>
+    Intelligence:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroModel.intelligence" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Strength:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroModel.strength" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Combat:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroModel.combat" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+
+</div>
+
+<h1>Binding to Hero List</h1>
+<div *ngFor="let heroItem of heroes">
+    
+    <h1>Hero {{heroItem.id}}: {{heroItem.name}}</h1>
+    Intelligence:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroItem.intelligence" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Strength:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroItem.strength" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    Combat:
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width.%]="heroItem.combat" aria-valuenow="25" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+
+</div>
+
+<h1>New Hero</h1>
+<form [formGroup]="heroForm" (ngSubmit)="setScores()">
+    Name:
+    <input type="text" class="form-control" id="name" formControlName="name">
+    Team:
+    <input type="text" class="form-control" id="team" formControlName="team">
+    Intelligence:
+    <input type="text" class="form-control" id="intelligence" formControlName="intelligence">
+    Strength:
+    <input type="text" class="form-control" id="strength" formControlName="strength">
+    Combat:
+    <input type="text" class="form-control" id="combat" formControlName="combat">
+    <button class="btn btn-primary" type="submit">Create Hero</button>
+</form>

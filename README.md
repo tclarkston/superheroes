@@ -1,3 +1,5 @@
+This is just a small CLI project that shows how to use a simple reactive form and simple data binding.
+
 # Styling
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
